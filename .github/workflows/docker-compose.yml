@@ -30,7 +30,7 @@ jobs:
 
     - name: Verify data in PostgreSQL
       run: |
-        docker exec <postgres_container_name> psql -U user -d mydatabase -c "SELECT * FROM test_table;"
+        docker exec postgres psql -U user -d mydatabase -c "SELECT * FROM test_table;"
 
     - name: Stop and clean up
-      run: docker-compose down
+      run: docker compose down
